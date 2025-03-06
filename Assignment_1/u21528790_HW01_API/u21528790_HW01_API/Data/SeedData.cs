@@ -4,14 +4,18 @@
     {
         public static void Initialize(IServiceProvider serviceProvider, IApplicationBuilder applicationBuilder)
         {
-            var context = serviceProvider.GetRequiredService<AppDbContext>();
-            if (!context.Products.Any())
+            using (var scope = serviceProvider.CreateScope())
             {
-                context.Products.AddRange(
-                    new Models.Product { Name = "Ferris the small Squishable Rustacean", Description = "Rust mascot plushie", Price = 60.00M },
-                    new Models.Product { Name = "Sliced bread Sticker", Description = "&bread[..]", Price = 80.00M }
+                var context = scope.ServiceProvider.GetRequiredService<AppDbContext>(); 
+
+                if (!context.Products.Any())
+                {
+                    context.Products.AddRange(
+                        new Models.Product { Name = "Ferris the small Squishable Rustacean", Description = "Rust mascot plushie", Price = 60.00M },
+                        new Models.Product { Name = "Sliced bread Sticker", Description = "&bread[..]", Price = 80.00M }
                     );
-                context.SaveChanges();
+                    context.SaveChanges();
+                }
             }
         }
     }

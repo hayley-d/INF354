@@ -6,11 +6,11 @@ namespace u21528790_HW01_API.Data
     public class AppDbContext : DbContext
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
-        public DbSet<Product> Products { get; set; }
+        public DbSet<Models.Product> Products { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Product>()
+            modelBuilder.Entity<Models.Product>()
                 .Property(p => p.Price)
                 .HasPrecision(18, 2); 
         }

@@ -143,3 +143,10 @@ C:\Users\2002d\Dropbox\INF354\INF354\Assignment_1\u21528790_HW01_API\u21528790_H
 C:\Users\2002d\Dropbox\INF354\INF354\Assignment_1\u21528790_HW01_API\u21528790_HW01_API\obj\Debug\net8.0\u21528790_HW01_API.pdb
 C:\Users\2002d\Dropbox\INF354\INF354\Assignment_1\u21528790_HW01_API\u21528790_HW01_API\obj\Debug\net8.0\u21528790_HW01_API.genruntimeconfig.cache
 C:\Users\2002d\Dropbox\INF354\INF354\Assignment_1\u21528790_HW01_API\u21528790_HW01_API\obj\Debug\net8.0\ref\u21528790_HW01_API.dll
+C:\Users\2002d\Dropbox\INF354\INF354\Assignment_1\u21528790_HW01_API\u21528790_HW01_API\bin\Debug\net8.0\Castle.Core.dll
+C:\Users\2002d\Dropbox\INF354\INF354\Assignment_1\u21528790_HW01_API\u21528790_HW01_API\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\2002d\Dropbox\INF354\INF354\Assignment_1\u21528790_HW01_API\u21528790_HW01_API\bin\Debug\net8.0\Moq.dll
+C:\Users\2002d\Dropbox\INF354\INF354\Assignment_1\u21528790_HW01_API\u21528790_HW01_API\bin\Debug\net8.0\xunit.abstractions.dll
+C:\Users\2002d\Dropbox\INF354\INF354\Assignment_1\u21528790_HW01_API\u21528790_HW01_API\bin\Debug\net8.0\xunit.assert.dll
+C:\Users\2002d\Dropbox\INF354\INF354\Assignment_1\u21528790_HW01_API\u21528790_HW01_API\bin\Debug\net8.0\xunit.core.dll
+C:\Users\2002d\Dropbox\INF354\INF354\Assignment_1\u21528790_HW01_API\u21528790_HW01_API\bin\Debug\net8.0\xunit.execution.dotnet.dll
