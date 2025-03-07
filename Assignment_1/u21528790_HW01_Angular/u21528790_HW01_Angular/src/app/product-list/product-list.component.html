@@ -1,0 +1,14 @@
+<div class="container">
+  <h2 class="mt-4">Product Listing</h2>
+  <div class="row">
+    <div *ngFor="let product of products" class="col-md-4">
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <p class="card-text">{{ product.description }}</p>
+          <p class="card-text"><strong>Price:</strong> ${{ product.price }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -37,6 +37,8 @@
               }
             ],
             "styles": [
+              "node_models/bootstrap/dist/css/bootstrap.min.css",
+              "@angular/material/prebuilt-themes/magenta-violet.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -95,6 +97,7 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/magenta-violet.css",
               "src/styles.css"
             ],
             "scripts": [],
