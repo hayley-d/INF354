@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\2002d\\Dropbox\\INF354\\INF354\\Assignment_1\\u21528790_HW01_Angular\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A3922168-8EFA-4375-B49E-915F7557DC40}|u21528790_HW01_Angular\\u21528790_HW01_Angular.esproj|c:\\users\\2002d\\dropbox\\inf354\\inf354\\assignment_1\\u21528790_hw01_angular\\u21528790_hw01_angular\\src\\app\\product-list\\product-list.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A3922168-8EFA-4375-B49E-915F7557DC40}|u21528790_HW01_Angular\\u21528790_HW01_Angular.esproj|solutionrelative:u21528790_hw01_angular\\src\\app\\product-list\\product-list.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A3922168-8EFA-4375-B49E-915F7557DC40}|u21528790_HW01_Angular\\u21528790_HW01_Angular.esproj|c:\\users\\2002d\\dropbox\\inf354\\inf354\\assignment_1\\u21528790_hw01_angular\\u21528790_hw01_angular\\src\\app\\product-list\\product-list.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{A3922168-8EFA-4375-B49E-915F7557DC40}|u21528790_HW01_Angular\\u21528790_HW01_Angular.esproj|solutionrelative:u21528790_hw01_angular\\src\\app\\product-list\\product-list.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3922168-8EFA-4375-B49E-915F7557DC40}|u21528790_HW01_Angular\\u21528790_HW01_Angular.esproj|c:\\users\\2002d\\dropbox\\inf354\\inf354\\assignment_1\\u21528790_hw01_angular\\u21528790_hw01_angular\\src\\app\\app.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A3922168-8EFA-4375-B49E-915F7557DC40}|u21528790_HW01_Angular\\u21528790_HW01_Angular.esproj|solutionrelative:u21528790_hw01_angular\\src\\app\\app.component.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,27 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "product-list.component.html",
-              "DocumentMoniker": "C:\\Users\\2002d\\Dropbox\\INF354\\INF354\\Assignment_1\\u21528790_HW01_Angular\\u21528790_HW01_Angular\\src\\app\\product-list\\product-list.component.html",
-              "RelativeDocumentMoniker": "u21528790_HW01_Angular\\src\\app\\product-list\\product-list.component.html",
-              "ToolTip": "C:\\Users\\2002d\\Dropbox\\INF354\\INF354\\Assignment_1\\u21528790_HW01_Angular\\u21528790_HW01_Angular\\src\\app\\product-list\\product-list.component.html",
-              "RelativeToolTip": "u21528790_HW01_Angular\\src\\app\\product-list\\product-list.component.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-03-07T01:24:56.897Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "product-list.component.ts",
               "DocumentMoniker": "C:\\Users\\2002d\\Dropbox\\INF354\\INF354\\Assignment_1\\u21528790_HW01_Angular\\u21528790_HW01_Angular\\src\\app\\product-list\\product-list.component.ts",
               "RelativeDocumentMoniker": "u21528790_HW01_Angular\\src\\app\\product-list\\product-list.component.ts",
               "ToolTip": "C:\\Users\\2002d\\Dropbox\\INF354\\INF354\\Assignment_1\\u21528790_HW01_Angular\\u21528790_HW01_Angular\\src\\app\\product-list\\product-list.component.ts",
               "RelativeToolTip": "u21528790_HW01_Angular\\src\\app\\product-list\\product-list.component.ts",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-03-07T01:23:09.229Z",
+              "WhenOpened": "2025-03-13T00:39:29.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "app.component.css",
+              "DocumentMoniker": "C:\\Users\\2002d\\Dropbox\\INF354\\INF354\\Assignment_1\\u21528790_HW01_Angular\\u21528790_HW01_Angular\\src\\app\\app.component.css",
+              "RelativeDocumentMoniker": "u21528790_HW01_Angular\\src\\app\\app.component.css",
+              "ToolTip": "C:\\Users\\2002d\\Dropbox\\INF354\\INF354\\Assignment_1\\u21528790_HW01_Angular\\u21528790_HW01_Angular\\src\\app\\app.component.css",
+              "RelativeToolTip": "u21528790_HW01_Angular\\src\\app\\app.component.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-13T00:32:15.802Z",
               "EditorCaption": ""
             }
           ]
