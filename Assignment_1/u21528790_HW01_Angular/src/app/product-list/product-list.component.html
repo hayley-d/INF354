@@ -1,0 +1,15 @@
+<div class="container mt-4">
+  <div *ngIf="products.length > 0; else noProducts">
+    <div class="row g-4">
+      <div class="col-md-4" *ngFor="let product of products">
+        <app-product-card [product]="product" (productDeleted)="onProductDeleted($event)"></app-product-card>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noProducts>
+    <p class="text-center text-muted fs-4">No available products</p>
+  </ng-template>
+</div>
+
+  
