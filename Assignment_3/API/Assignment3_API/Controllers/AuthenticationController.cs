@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Assignment3_API.DTOs;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Assignment3_API.Controllers
 {

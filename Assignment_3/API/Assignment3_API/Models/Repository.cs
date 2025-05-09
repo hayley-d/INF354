@@ -15,6 +15,7 @@ namespace Assignment3_API.Models
         {
             _appDbContext.Add(entity);
         }
+
         public async Task<bool> SaveChangesAsync()
         {
             return await _appDbContext.SaveChangesAsync() > 0;
