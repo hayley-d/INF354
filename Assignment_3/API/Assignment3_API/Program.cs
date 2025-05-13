@@ -1,3 +1,4 @@
+using Assignment3_API.Data;
 using Assignment3_API.Factory;
 using Assignment3_API.Models;
 using Microsoft.AspNetCore.Http.Features;
@@ -55,6 +56,8 @@ builder.Services.Configure<FormOptions>(o =>
 builder.Services.AddScoped<IUserClaimsPrincipalFactory<AppUser>, AppUserClaimsPrincipalFactory>();
 
 builder.Services.Configure<DataProtectionTokenProviderOptions>(options => options.TokenLifespan = TimeSpan.FromHours(3));
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddScoped<IRepository, Repository>();

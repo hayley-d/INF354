@@ -1,4 +1,4 @@
-﻿namespace Assignment3_API.DTOs
+﻿namespace Assignment3_API.Models
 {
     public class LoginDto
     {
@@ -6,4 +6,3 @@
         public string Password { get; set; }
     }
 }
-
