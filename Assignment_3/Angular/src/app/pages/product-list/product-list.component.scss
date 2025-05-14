@@ -1,0 +1,81 @@
+.product-wrapper {
+  padding: 2rem;
+  background: linear-gradient(135deg, #ffe0f0, #ffc8e0);
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+
+  h2 {
+    text-align: center;
+    color: #ff69b4;
+    margin-bottom: 1rem;
+  }
+
+  input {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 1rem;
+    display: block;
+    padding: 0.6rem;
+    border-radius: 1rem;
+    border: 2px solid #ffb6c1;
+    font-size: 1rem;
+  }
+
+  label {
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #d63384;
+    font-weight: bold;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+
+    th, td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid #ffe0f0;
+    }
+
+    th {
+      background: #ff69b4;
+      color: white;
+      cursor: pointer;
+    }
+
+    tr:hover {
+      background: #fff0f6;
+    }
+
+    img {
+      width: 50px;
+      border-radius: 0.5rem;
+    }
+  }
+
+  .pagination {
+    margin-top: 1rem;
+    text-align: center;
+
+    button {
+      margin: 0 0.3rem;
+      padding: 0.5rem 1rem;
+      background: #ffb6c1;
+      border: none;
+      border-radius: 1rem;
+      cursor: pointer;
+      font-weight: bold;
+
+      &.active {
+        background: #ff69b4;
+        color: white;
+      }
+    }
+  }
+}
