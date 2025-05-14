@@ -4,11 +4,12 @@ import { Product } from '../../models/product.model';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+import {NavbarComponent } from '../../components/navbar/navbar.component'
 
 @Component({
   selector: 'app-product-list',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule,NavbarComponent],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.scss'
 })
