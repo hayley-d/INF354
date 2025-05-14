@@ -30,36 +30,95 @@ namespace Assignment3_API.Controllers
             _config = config;
         }
 
+        /// <summary>
+        /// Registers a new user and generates an email confirmation token.
+        /// </summary>
         [AllowAnonymous]
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterDto model)
         {
+            // Validates that the model meets required data annotations
+            if (!ModelState.IsValid)
+                return BadRequest(new
+                {
+                    success = false,
+                    message = "Invalid data submitted.",
+                    errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage)
+                });
+
+            // Creates a new user entity
             var user = new AppUser
             {
                 UserName = model.Username,
                 Email = model.Email
             };
 
+            // Attempts to save the user to the database with the given password
             var result = await _userManager.CreateAsync(user, model.Password);
-            if (!result.Succeeded)
-                return BadRequest(result.Errors);
 
-            return Ok(new { message = "User registered successfully." });
+            // If creation failed return an error
+            if (!result.Succeeded)
+            {
+                var errorMessages = result.Errors.Select(e => e.Description);
+                return BadRequest(new
+                {
+                    success = false,
+                    message = "Registration failed.",
+                    errors = errorMessages
+                });
+            }
+
+            return Ok(new
+            {
+                success = true,
+                message = "User registered successfully."
+            });
         }
 
+
+        /// <summary>
+        /// Authenticates the user and returns a JWT token.
+        /// </summary>
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginDto model)
         {
-            var user = await _userManager.FindByNameAsync(model.Username);
-            if (user == null || !await _userManager.CheckPasswordAsync(user, model.Password))
-                return Unauthorized();
+            // Validates that the model meets required data annotations
+            if (!ModelState.IsValid)
+                return BadRequest(new
+                {
+                    success = false,
+                    message = "Invalid data submitted.",
+                    errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage)
+                });
 
+
+            // Looks up the user by username
+            var user = await _userManager.FindByNameAsync(model.Username);
+
+            // Checks if users is on system and returns the appropreate error if incorrect
+            if (user == null)
+                return Unauthorized(new { message = "Invalid username or password." });
+
+            // Verifies the password and returns the appropreate error if incorrect
+            if (!await _userManager.CheckPasswordAsync(user, model.Password))
+                return Unauthorized(new { message = "Invalid username or password." });
+
+            // If checks pass then generate and return a JWT
             var token = GenerateJwtToken(user);
-            return Ok(new { token });
+
+            return Ok(new
+            {
+                success = true,
+                token
+            });
         }
 
+        /// <summary>
+        /// Generates a JWT token for the authenticated user.
+        /// </summary>
         private string GenerateJwtToken(AppUser user)
         {
+            // Defines claims to embed inside the token
             var claims = new[]
             {
                 new Claim(JwtRegisteredClaimNames.Sub, user.UserName!),
@@ -67,9 +126,12 @@ namespace Assignment3_API.Controllers
                 new Claim(ClaimTypes.NameIdentifier, user.Id)
             };
 
+            // Gets the secret key from appsettings.json to sign the token
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Tokens:Key"]!));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
+            // Builds the token with issuer, audience, claims, expiration, and signing credentials
+            // Token valid for 2 hours
             var token = new JwtSecurityToken(
                 issuer: _config["Tokens:Issuer"],
                 audience: _config["Tokens:Audience"],
@@ -78,6 +140,7 @@ namespace Assignment3_API.Controllers
                 signingCredentials: creds
             );
 
+            // Serializes the token to a string
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
     }

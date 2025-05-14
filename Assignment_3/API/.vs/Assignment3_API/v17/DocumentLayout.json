@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\2002d\\Dropbox\\INF354\\INF354\\Assignment_3\\API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5E2A2C08-8B21-4662-9849-D37D89772610}|Assignment3_API\\Assignment3_API.csproj|c:\\users\\2002d\\dropbox\\inf354\\inf354\\assignment_3\\api\\assignment3_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{5E2A2C08-8B21-4662-9849-D37D89772610}|Assignment3_API\\Assignment3_API.csproj|solutionrelative:assignment3_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5E2A2C08-8B21-4662-9849-D37D89772610}|Assignment3_API\\Assignment3_API.csproj|c:\\users\\2002d\\dropbox\\inf354\\inf354\\assignment_3\\api\\assignment3_api\\models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5E2A2C08-8B21-4662-9849-D37D89772610}|Assignment3_API\\Assignment3_API.csproj|solutionrelative:assignment3_api\\models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5E2A2C08-8B21-4662-9849-D37D89772610}|Assignment3_API\\Assignment3_API.csproj|c:\\users\\2002d\\dropbox\\inf354\\inf354\\assignment_3\\api\\assignment3_api\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E2A2C08-8B21-4662-9849-D37D89772610}|Assignment3_API\\Assignment3_API.csproj|solutionrelative:assignment3_api\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,27 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\2002d\\Dropbox\\INF354\\INF354\\Assignment_3\\API\\Assignment3_API\\appsettings.json",
-              "RelativeDocumentMoniker": "Assignment3_API\\appsettings.json",
-              "ToolTip": "C:\\Users\\2002d\\Dropbox\\INF354\\INF354\\Assignment_3\\API\\Assignment3_API\\appsettings.json",
-              "RelativeToolTip": "Assignment3_API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-13T07:50:46.129Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AppUser.cs",
-              "DocumentMoniker": "C:\\Users\\2002d\\Dropbox\\INF354\\INF354\\Assignment_3\\API\\Assignment3_API\\Models\\AppUser.cs",
-              "RelativeDocumentMoniker": "Assignment3_API\\Models\\AppUser.cs",
-              "ToolTip": "C:\\Users\\2002d\\Dropbox\\INF354\\INF354\\Assignment_3\\API\\Assignment3_API\\Models\\AppUser.cs",
-              "RelativeToolTip": "Assignment3_API\\Models\\AppUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Title": "AuthenticationController.cs",
+              "DocumentMoniker": "C:\\Users\\2002d\\Dropbox\\INF354\\INF354\\Assignment_3\\API\\Assignment3_API\\Controllers\\AuthenticationController.cs",
+              "RelativeDocumentMoniker": "Assignment3_API\\Controllers\\AuthenticationController.cs",
+              "ToolTip": "C:\\Users\\2002d\\Dropbox\\INF354\\INF354\\Assignment_3\\API\\Assignment3_API\\Controllers\\AuthenticationController.cs",
+              "RelativeToolTip": "Assignment3_API\\Controllers\\AuthenticationController.cs",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAiwHAAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T07:47:45.645Z",
+              "WhenOpened": "2025-05-14T02:21:08.922Z",
               "EditorCaption": ""
             }
           ]
