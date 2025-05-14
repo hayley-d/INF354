@@ -8,7 +8,6 @@ namespace Assignment3_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
     public class ProductTypesController : ControllerBase
     {
         private readonly ApplicationDbContext _context;

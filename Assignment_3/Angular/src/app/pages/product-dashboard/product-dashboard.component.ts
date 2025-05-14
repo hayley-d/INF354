@@ -29,7 +29,7 @@ export class ProductDashboardComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.http.get<any[]>('https://localhost:5001/api/products').subscribe(data => {
+    this.http.get<any[]>('https://localhost:5001/api/Products').subscribe(data => {
       // Top 10 expensive
       this.top10 = [...data]
         .sort((a, b) => b.price - a.price)

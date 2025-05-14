@@ -18,7 +18,7 @@
   <table>
     <thead>
       <tr>
-        <th (click)="sortBy('image')">Image</th>
+       <!-- <th (click)="sortBy('image')">Image</th>-->
         <th (click)="sortBy('name')">Name</th>
         <th (click)="sortBy('price')">Price</th>
         <th (click)="sortBy('description')">Description</th>
@@ -28,12 +28,12 @@
     </thead>
     <tbody>
       <tr *ngFor="let product of filteredAndPaged">
-        <td><img [src]="product.image" alt="Product Image" /></td>
+        <!-- <td><img [src]="product.image" alt="Product Image" /></td> -->
         <td>{{ product.name }}</td>
         <td>R{{ product.price.toFixed(2) }}</td>
         <td>{{ product.description }}</td>
-        <td>{{ product.brand.name }}</td>
-        <td>{{ product.productType.name }}</td>
+        <td>{{ product.brandName }}</td>
+        <td>{{ product.productTypeName }}</td>
       </tr>
     </tbody>
   </table>

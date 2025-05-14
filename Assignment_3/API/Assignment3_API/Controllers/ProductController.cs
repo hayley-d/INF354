@@ -8,7 +8,6 @@ namespace Assignment3_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
     public class ProductController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
@@ -18,13 +17,35 @@ namespace Assignment3_API.Controllers
             _context = context;
         }
 
+      
+
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
         {
-            return await _context.Products
-                .Include(p => p.Brand)
-                .Include(p => p.ProductType)
+            var products = await _context.Products
+                .Select(p => new ProductDto
+                {
+                    ProductId = p.ProductId,
+                    Name = p.Name,
+                    Description = p.Description,
+                    DateCreated = p.DateCreated,
+                    Price = p.Price,
+                    ProductTypeId = p.ProductTypeId,
+                    BrandId = p.BrandId,
+                    IsActive = p.IsActive,
+                    IsDeleted = p.IsDeleted,
+                    BrandName = _context.Brands
+                        .Where(b => b.BrandId == p.BrandId)
+                        .Select(b => b.Name)
+                        .FirstOrDefault(),
+                    ProductTypeName = _context.ProductTypes
+                        .Where(pt => pt.ProductTypeId == p.ProductTypeId)
+                        .Select(pt => pt.Name)
+                        .FirstOrDefault()
+                })
                 .ToListAsync();
+
+            return Ok(products);
         }
 
         [HttpGet("{id}")]

@@ -56,9 +56,9 @@ export class ProductListComponent implements OnInit {
   getSortValue(product: Product, column: string): string {
     switch (column) {
       case 'brand':
-        return product.brand.name.toLowerCase();
+        return product.brandName.toLowerCase();
       case 'productType':
-        return product.productType.name.toLowerCase();
+        return product.productTypeName.toLowerCase();
       default:
         return String((product as any)[column]).toLowerCase();
     }
@@ -73,8 +73,8 @@ export class ProductListComponent implements OnInit {
       return (
         p.name.toLowerCase().includes(needle) ||
         p.description.toLowerCase().includes(needle) ||
-        p.brand.name.toLowerCase().includes(needle) ||
-        p.productType.name.toLowerCase().includes(needle) ||
+        p.brandName.toLowerCase().includes(needle) ||
+        p.productTypeName.toLowerCase().includes(needle) ||
         p.price.toFixed(2).includes(needle)
       );
     });

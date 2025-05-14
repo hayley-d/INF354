@@ -4,10 +4,8 @@ export interface Product {
   price: number;
   description: string;
   image: string;
-  brand: {
-    name: string;
-  };
-  productType: {
-    name: string;
-  };
+  brandId: number;
+  productType: number;
+  productTypeName: string;
+  brandName: string;
 }
