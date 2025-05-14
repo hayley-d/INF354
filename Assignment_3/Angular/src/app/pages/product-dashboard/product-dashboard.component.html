@@ -1,0 +1,57 @@
+<h2>Product Dashboard 📊</h2>
+
+<div class="charts">
+  <div class="chart-card">
+    <h3>Products by Brand</h3>
+    <ngx-charts-pie-chart
+      [view]="view"
+      [results]="byBrand"
+      [scheme]="colorScheme"
+      [legend]="true"
+      [labels]="true"
+      [animations]="true"
+      [explodeSlices]="true"
+      [doughnut]="false"
+      >
+    </ngx-charts-pie-chart>
+  </div>
+
+  <div class="chart-card">
+    <h3>Products by Type</h3>
+    <ngx-charts-pie-chart
+      [view]="view"
+      [results]="byType"
+      [scheme]="colorScheme"
+      [legend]="true"
+      [labels]="true"
+      [animations]="true"
+      [explodeSlices]="true"
+      [doughnut]="false">
+    </ngx-charts-pie-chart>
+  </div>
+</div>
+
+<hr />
+
+<h3>Top 10 Most Expensive Products 💰</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price (ZAR)</th>
+      <th>Brand</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of top10">
+      <td>{{ product.name }}</td>
+      <td>R{{ product.price.toFixed(2) }}</td>
+      <td>{{ product.brand.name }}</td>
+      <td>{{ product.productType.name }}</td>
+      <td>{{ product.description }}</td>
+    </tr>
+  </tbody>
+</table>
+

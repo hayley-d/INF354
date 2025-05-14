@@ -1,5 +1,8 @@
 <div class="product-wrapper">
   <h2>Product Catalog 🌸</h2>
+  <p *ngIf="successMessage" style="color: green; text-align: center">
+    {{ successMessage }}
+  </p>
 
   <input type="text" [(ngModel)]="searchTerm" placeholder="Filter products..." />
 

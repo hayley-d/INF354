@@ -1,1 +1,28 @@
-<p>add-product works!</p>
+<form (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+  <h2>Add a New Product 💾</h2>
+
+  <label>Product Image</label>
+  <input type="file" (change)="onFileChange($event)" required />
+
+  <label>Product Name</label>
+  <input type="text" [(ngModel)]="name" name="name" required />
+
+  <label>Price (ZAR)</label>
+  <input type="number" step="0.01" [(ngModel)]="price" name="price" required />
+
+  <label>Description</label>
+  <textarea [(ngModel)]="description" name="description" required></textarea>
+
+  <label>Brand</label>
+  <select [(ngModel)]="brandId" name="brandId" required>
+    <option *ngFor="let brand of brands" [value]="brand.brandId">{{ brand.name }}</option>
+  </select>
+
+  <label>Product Type</label>
+  <select [(ngModel)]="productTypeId" name="productTypeId" required>
+    <option *ngFor="let type of productTypes" [value]="type.productTypeId">{{ type.name }}</option>
+  </select>
+
+  <button type="submit">Submit</button>
+</form>
+

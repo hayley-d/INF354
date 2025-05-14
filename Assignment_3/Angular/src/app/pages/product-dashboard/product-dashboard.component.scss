@@ -1,0 +1,57 @@
+:host {
+  display: block;
+  padding: 2rem;
+  background: linear-gradient(to bottom right, #ffe0f0, #ffc8e0);
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+}
+
+h2, h3 {
+  color: #ff69b4;
+  text-align: center;
+}
+
+.charts {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+
+  .chart-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.3);
+    margin: 1rem;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.2);
+
+  th, td {
+    padding: 0.8rem;
+    text-align: left;
+    border-bottom: 1px solid #ffe0f0;
+  }
+
+  th {
+    background: #ff69b4;
+    color: white;
+  }
+
+  tr:hover {
+    background-color: #fff0f6;
+  }
+}
+
+::ng-deep svg g.pie > path {
+  filter: drop-shadow(0 0 6px #ff69b4);
+  transition: transform 0.3s ease;
+}
+

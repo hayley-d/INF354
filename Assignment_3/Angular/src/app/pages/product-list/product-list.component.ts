@@ -3,6 +3,7 @@ import { ProductService } from '../../services/product.service';
 import { Product } from '../../models/product.model';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-product-list',
@@ -20,10 +21,17 @@ export class ProductListComponent implements OnInit {
   searchTerm: string = '';
   pageSize: number = 5;
   currentPage: number = 1;
+  successMessage: string = '';
 
-  constructor(private productService: ProductService) {}
+  constructor(private route: ActivatedRoute, private productService: ProductService) {}
 
   ngOnInit(): void {
+      this.route.queryParams.subscribe(params => {
+    if (params['created']) {
+      this.successMessage = `${params['created']} created successfully.`;
+    }
+  });
+
     this.productService.getProducts().subscribe((data) => {
       this.products = data;
       this.filtered = [...this.products];

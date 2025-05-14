@@ -3,6 +3,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { ProductListComponent } from './pages/product-list/product-list.component';
 import { AddProductComponent } from './pages/add-product/add-product.component';
+import { ProductDashboardComponent } from './pages/product-dashboard/product-dashboard.component';
 import { AuthGuard } from './guards/auth.guard'
 
 export const routes: Routes = [
@@ -17,6 +18,11 @@ export const routes: Routes = [
   {
     path: 'add-product',
     component: AddProductComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'dashboard',
+    component: ProductDashboardComponent,
     canActivate: [AuthGuard]
   }
 ];
