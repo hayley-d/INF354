@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "jU0UQLK9fJ72TccePEXM+Qxou2wujCSG+xHBW2bhkto=",
+  "Hash": "/l+o1mvs+YQ3yzct3pUZHHDpTpv6nd80aXKeAUDEsmI=",
   "Source": "Assignment3_API",
   "BasePath": "_content/Assignment3_API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

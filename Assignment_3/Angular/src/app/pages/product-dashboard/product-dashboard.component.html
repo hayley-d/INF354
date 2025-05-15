@@ -1,6 +1,6 @@
 <app-navbar />
 
-<h2>Product Dashboard 📊</h2>
+<h2>Product Dashboard</h2>
 
 <div class="charts">
   <div class="chart-card">
@@ -19,7 +19,7 @@
   </div>
 
   <div class="chart-card">
-    <h3>Products by Type</h3>
+    <h3>Products by Product Type</h3>
     <ngx-charts-pie-chart
       [view]="view"
       [results]="byType"
@@ -31,11 +31,13 @@
       [doughnut]="false">
     </ngx-charts-pie-chart>
   </div>
+
 </div>
 
 <hr />
 
-<h3>Top 10 Most Expensive Products 💰</h3>
+<div class="bar-card">
+<h3>Top 10 Most Expensive Products</h3>
 <table>
   <thead>
     <tr>
@@ -50,10 +52,11 @@
     <tr *ngFor="let product of top10">
       <td>{{ product.name }}</td>
       <td>R{{ product.price.toFixed(2) }}</td>
-      <td>{{ product.brand.name }}</td>
-      <td>{{ product.productType.name }}</td>
+      <td>{{ getBrandName(product.brandId) }}</td>
+      <td>{{ getTypeName(product.productType) }}</td>
       <td>{{ product.description }}</td>
     </tr>
   </tbody>
 </table>
 
+</div>

@@ -1,9 +1,9 @@
 <app-navbar />
-<form (ngSubmit)="onSubmit()" enctype="multipart/form-data">
-  <h2>Add a New Product 💾</h2>
+<form (ngSubmit)="onSubmit()">
+  <h2>Add a New Product</h2>
 
   <label>Product Image</label>
-  <input type="file" (change)="onFileChange($event)" required />
+  <input type="file" (change)="onFileChange($event)" accept="image/*" required />
 
   <label>Product Name</label>
   <input type="text" [(ngModel)]="name" name="name" required />

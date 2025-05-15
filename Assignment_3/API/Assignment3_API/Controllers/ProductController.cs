@@ -68,6 +68,42 @@ namespace Assignment3_API.Controllers
             return CreatedAtAction(nameof(GetProduct), new { id = product.ProductId }, product);
         }
 
+        [HttpPost]
+        public async Task<ActionResult<Product>> PostProduct(ProductCreateDto req)
+        {
+            // Find the brand by the submitted brand ID
+            var brand = await _context.Brands.FindAsync(req.BrandId);
+            // Find the productType by the submitted type ID
+            var productType = await _context.ProductTypes.FindAsync(req.ProductTypeId);
+
+            // If either of them are null then respond with an error message
+            if (brand == null || productType == null)
+                return BadRequest("Invalid brand or product type.");
+
+            // Create the new Product object
+            var product = new Product
+            {
+                Name = req.Name,
+                Description = req.Description,
+                Price = req.Price,
+                BrandId = req.BrandId,
+                ProductTypeId = req.ProductTypeId,
+                Image = req.Image,
+                DateCreated = DateTime.UtcNow,
+                DateModified = DateTime.UtcNow,
+                IsActive = true,
+                IsDeleted = false,
+                Brand = brand,
+                ProductType = productType
+            };
+
+            _context.Products.Add(product);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction(nameof(GetProduct), new { id = product.ProductId }, product);
+        }
+
+
         [HttpPut("{id}")]
         public async Task<IActionResult> PutProduct(int id, Product product)
         {

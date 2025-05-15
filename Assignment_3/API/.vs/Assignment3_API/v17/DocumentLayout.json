@@ -28,7 +28,7 @@
               "RelativeDocumentMoniker": "Assignment3_API\\Controllers\\ProductController.cs",
               "ToolTip": "C:\\Users\\2002d\\Dropbox\\INF354\\INF354\\Assignment_3\\API\\Assignment3_API\\Controllers\\ProductController.cs",
               "RelativeToolTip": "Assignment3_API\\Controllers\\ProductController.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAAAC0AAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAgwFIAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-14T12:44:57.625Z",
               "EditorCaption": ""
@@ -43,8 +43,11 @@
               "RelativeToolTip": "Assignment3_API\\Models\\ProductDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T12:44:26.851Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-14T12:44:26.851Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }
