@@ -106,32 +106,6 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "product",
-        "Type": "Assignment3_API.Models.Product",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "Assignment3_API.Models.Product",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "Assignment3_API.Controllers.ProductController",
-    "Method": "PostProduct",
-    "RelativePath": "api/Product",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
         "Name": "req",
         "Type": "Assignment3_API.Models.ProductCreateDto",
         "IsRequired": true

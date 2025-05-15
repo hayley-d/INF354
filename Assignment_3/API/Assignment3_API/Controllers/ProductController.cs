@@ -60,13 +60,6 @@ namespace Assignment3_API.Controllers
             return product;
         }
 
-        [HttpPost]
-        public async Task<ActionResult<Product>> PostProduct(Product product)
-        {
-            _context.Products.Add(product);
-            await _context.SaveChangesAsync();
-            return CreatedAtAction(nameof(GetProduct), new { id = product.ProductId }, product);
-        }
 
         [HttpPost]
         public async Task<ActionResult<Product>> PostProduct(ProductCreateDto req)
@@ -100,7 +93,21 @@ namespace Assignment3_API.Controllers
             _context.Products.Add(product);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetProduct), new { id = product.ProductId }, product);
+            var response = new ProductResponseDto
+            {
+                ProductId = product.ProductId,
+                Name = product.Name,
+                Price = product.Price,
+                Description = product.Description,
+                Image = product.Image,
+                BrandId = product.BrandId,
+                BrandName = brand.Name,
+                ProductTypeId = product.ProductTypeId,
+                ProductTypeName = productType.Name
+            };
+
+            return CreatedAtAction(nameof(GetProduct), new { id = product.ProductId }, response);
+
         }
 
 
