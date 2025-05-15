@@ -1,6 +1,10 @@
+<!-- Reusable top navigation bar component -->
 <app-navbar />
+
 <div class="product-wrapper">
   <h2>Product Catalog 🌸</h2>
+
+  <!-- Displays a success message after product creation -->
   <p *ngIf="successMessage" style="color: green; text-align: center">
     {{ successMessage }}
   </p>
@@ -19,6 +23,7 @@
   <table>
     <thead>
       <tr>
+       <!-- Clicking on any of these headers will sort the table by that column -->
        <!-- <th (click)="sortBy('image')">Image</th>-->
         <th (click)="sortBy('name')">Name</th>
         <th (click)="sortBy('price')">Price</th>
@@ -39,6 +44,7 @@
     </tbody>
   </table>
 
+  <!-- Pagination buttons where each one sets the current page -->
   <div class="pagination">
     <button *ngFor="let page of totalPages" (click)="currentPage = page" [class.active]="page === currentPage">
       {{ page }}

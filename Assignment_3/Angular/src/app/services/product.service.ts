@@ -8,10 +8,12 @@ import { Observable } from 'rxjs';
 })
 
 export class ProductService {
+  // API endpoint to get all products
   private api = 'http://localhost:5184/api/Product';
 
   constructor(private http: HttpClient) {}
 
+  // Retrieves all products from the backend
   getProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(this.api);
   }

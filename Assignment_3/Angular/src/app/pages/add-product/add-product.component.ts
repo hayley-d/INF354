@@ -14,14 +14,19 @@ import { ProductTypeService } from '../../services/product-type.service';
   templateUrl: './add-product.component.html',
   styleUrl: './add-product.component.scss'
 })
+
 export class AddProductComponent implements OnInit {
+  // Product values entered by the user
   name = '';
   price: number | null = null;
   description = '';
   brandId = '';
   productTypeId = '';
   imageBase64: string = '';
+  
+  // Brand array fetched from the backend
   brands: any[] = [];
+  // Product Type array fetched from the backend
   productTypes: any[] = [];
 
   constructor( private brandService: BrandService, 
@@ -63,7 +68,7 @@ export class AddProductComponent implements OnInit {
       price: this.price,
       brandId: Number(this.brandId),
       productTypeId: Number(this.productTypeId),
-      image: this.imageBase64
+      image: ''
     };
 
     // Submit the product to the backend API

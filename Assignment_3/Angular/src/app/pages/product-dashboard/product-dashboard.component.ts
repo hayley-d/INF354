@@ -22,15 +22,22 @@ import { Product } from '../../models/product.model';
 })
 
 export class ProductDashboardComponent implements OnInit {
+  // Pie chart data for products grouped by type.
   byType: any[] = [];
+  // Pie chart data grouped by brand
   byBrand: any[] = [];
+  // Top 10 most expensive items
   top10: Product[] = [];
 
+  // Brands, Product Types and Products retrieved from the backend
   brands: Brand[] = [];
   productTypes: ProductType[] = [];
   products: Product[] = [];
 
+  // Chart dimensions (width, height).
   view: [number, number] = [400, 300];
+
+  // Custom color scheme used in all charts.
   colorScheme: Color = {
     name: 'candy-pink',
     selectable: true,
@@ -44,16 +51,22 @@ export class ProductDashboardComponent implements OnInit {
     private http: HttpClient
   ) {}
 
+  /**
+   * Angular lifecycle hook: fetches all brands, product types, and products.
+   * After data is loaded:
+   * - Top 10 products by price are computed
+   * - Products are grouped for pie charts by brand and type
+   */
   ngOnInit(): void {
-    // Get the brands and product types from the backend.
+    // Fetch brands
     this.brandService.getBrands().subscribe(data => this.brands = data);
+    // Fetch Product Types
     this.productTypeService.getProductTypes().subscribe(data => this.productTypes = data);
-
-    // Get products and then compute top10 + other chart data
+    // fetch Products and compute dashboard values
     this.productService.getProducts().subscribe(products => {
       this.products = products;
 
-      // Top 10 expensive products
+      // Compute top 10 most expensive products
       this.top10 = [...this.products]
         .sort((a, b) => b.price - a.price)
         .slice(0, 10);
@@ -67,27 +80,26 @@ export class ProductDashboardComponent implements OnInit {
         }
         this.byBrand = Object.entries(brandMap).map(([name, value]) => ({ name, value }));
 
-        // Group by Product Type
-        const typeMap: Record<string, number> = {};
-        for (const product of this.products) {
-          const type = this.productTypes.find(t => t.productTypeId === product.productType);
-          const typeName = type ? type.name : 'Unknown';
-          typeMap[typeName] = (typeMap[typeName] || 0) + 1;
-        }
-        this.byType = Object.entries(typeMap).map(([name, value]) => ({ name, value }));
+      // Group by Product Type Name 
+      const typeMap: Record<string, number> = {};
+      for (const product of this.products) {
+        const typeName = product.productTypeName || 'Unknown';
+        typeMap[typeName] = (typeMap[typeName] || 0) + 1;
+      }
+      this.byType = Object.entries(typeMap).map(([name, value]) => ({ name, value }));
+
     });
 
     
   }
 
+  /**
+   * Helper function: returns the name of a brand given its ID.
+   * Used in the top 10 product table.
+   * @param brandId - The brand's unique ID
+   */
   getBrandName(brandId: number): string {
     const brand = this.brands.find(b => b.brandId === brandId);
     return brand ? brand.name : 'Unknown';
   }
-
-  getTypeName(typeId: number): string {
-    const type = this.productTypes.find(t => t.productTypeId === typeId);
-    return type ? type.name : 'Unknown';
-  }
-
 }

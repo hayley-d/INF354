@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class NavbarComponent {
   constructor(private router: Router) {}
 
+  // Log the user out and redirect to the login page
   logout() {
     localStorage.removeItem('token');
     this.router.navigate(['/login']);

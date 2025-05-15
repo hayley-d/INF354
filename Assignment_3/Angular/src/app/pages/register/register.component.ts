@@ -12,6 +12,7 @@ import { AuthService } from '../../services/auth.service';
   styleUrl: './register.component.scss'
 })
 export class RegisterComponent {
+  // User entered values
   email = '';
   password = '';
   message = '';
@@ -19,12 +20,14 @@ export class RegisterComponent {
   constructor(private auth: AuthService, private router: Router) {}
 
   onSubmit() {
+    // Call the AuthService with values
     this.auth.register({
       username: this.email,
       email: this.email,
       password: this.password
     }).subscribe({
       next: () => {
+        // Redirect to the login page with query params set
         this.router.navigate(['/login'], {
           queryParams: { registered: 'true' }
         });
