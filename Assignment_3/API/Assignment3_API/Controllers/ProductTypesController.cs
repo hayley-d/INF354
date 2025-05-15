@@ -17,12 +17,14 @@ namespace Assignment3_API.Controllers
             _context = context;
         }
 
+        // Returns all types from the database
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ProductType>>> GetProductTypes()
         {
             return await _context.ProductTypes.ToListAsync();
         }
 
+        // Gets a product type by a specified id
         [HttpGet("{id}")]
         public async Task<ActionResult<ProductType>> GetProductType(int id)
         {
@@ -31,6 +33,7 @@ namespace Assignment3_API.Controllers
             return type;
         }
 
+        // Adds a new product type
         [HttpPost]
         public async Task<ActionResult<ProductType>> PostProductType(ProductType type)
         {

@@ -30,9 +30,8 @@ namespace Assignment3_API.Controllers
             _config = config;
         }
 
-        /// <summary>
+
         /// Registers a new user and generates an email confirmation token.
-        /// </summary>
         [AllowAnonymous]
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterDto model)
@@ -76,9 +75,7 @@ namespace Assignment3_API.Controllers
         }
 
 
-        /// <summary>
         /// Authenticates the user and returns a JWT token.
-        /// </summary>
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginDto model)
         {
@@ -113,9 +110,7 @@ namespace Assignment3_API.Controllers
             });
         }
 
-        /// <summary>
         /// Generates a JWT token for the authenticated user.
-        /// </summary>
         private string GenerateJwtToken(AppUser user)
         {
             // Defines claims to embed inside the token

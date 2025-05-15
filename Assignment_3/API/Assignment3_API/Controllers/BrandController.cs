@@ -17,12 +17,16 @@ namespace Assignment3_API.Controllers
             _context = context;
         }
 
+
+
+        ///  Returns all brands from the databse.
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Brand>>> GetBrands()
         {
             return await _context.Brands.ToListAsync();
         }
 
+        ///  Returns iinformation of a brand specified by the parameter id
         [HttpGet("{id}")]
         public async Task<ActionResult<Brand>> GetBrand(int id)
         {

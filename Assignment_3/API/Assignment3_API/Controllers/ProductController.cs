@@ -17,8 +17,7 @@ namespace Assignment3_API.Controllers
             _context = context;
         }
 
-      
-
+        /// Retrieves all products from the database and maps them to a simplified DTO.
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
         {
@@ -48,6 +47,8 @@ namespace Assignment3_API.Controllers
             return Ok(products);
         }
 
+
+        /// Retrieves a single product by ID, including its brand and type navigation properties.
         [HttpGet("{id}")]
         public async Task<ActionResult<Product>> GetProduct(int id)
         {
@@ -60,16 +61,16 @@ namespace Assignment3_API.Controllers
             return product;
         }
 
-
+        /// Creates a new product from the submitted ProductCreateDto.
+        /// Validates foreign key relationships (brand and type) and returns a response DTO.
         [HttpPost]
         public async Task<ActionResult<Product>> PostProduct(ProductCreateDto req)
         {
-            // Find the brand by the submitted brand ID
+            // Look up associated Brand and ProductType
             var brand = await _context.Brands.FindAsync(req.BrandId);
-            // Find the productType by the submitted type ID
+
             var productType = await _context.ProductTypes.FindAsync(req.ProductTypeId);
 
-            // If either of them are null then respond with an error message
             if (brand == null || productType == null)
                 return BadRequest("Invalid brand or product type.");
 
@@ -93,6 +94,7 @@ namespace Assignment3_API.Controllers
             _context.Products.Add(product);
             await _context.SaveChangesAsync();
 
+            // Construct and return a simplified response DTO
             var response = new ProductResponseDto
             {
                 ProductId = product.ProductId,
