@@ -3,8 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\2002d\\Dropbox\\INF354\\INF354\\Assignment_3\\API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5E2A2C08-8B21-4662-9849-D37D89772610}|Assignment3_API\\Assignment3_API.csproj|c:\\users\\2002d\\dropbox\\inf354\\inf354\\assignment_3\\api\\assignment3_api\\models\\productresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E2A2C08-8B21-4662-9849-D37D89772610}|Assignment3_API\\Assignment3_API.csproj|solutionrelative:assignment3_api\\models\\productresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E2A2C08-8B21-4662-9849-D37D89772610}|Assignment3_API\\Assignment3_API.csproj|c:\\users\\2002d\\dropbox\\inf354\\inf354\\assignment_3\\api\\assignment3_api\\models\\productcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E2A2C08-8B21-4662-9849-D37D89772610}|Assignment3_API\\Assignment3_API.csproj|solutionrelative:assignment3_api\\models\\productcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E2A2C08-8B21-4662-9849-D37D89772610}|Assignment3_API\\Assignment3_API.csproj|c:\\users\\2002d\\dropbox\\inf354\\inf354\\assignment_3\\api\\assignment3_api\\models\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E2A2C08-8B21-4662-9849-D37D89772610}|Assignment3_API\\Assignment3_API.csproj|solutionrelative:assignment3_api\\models\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5E2A2C08-8B21-4662-9849-D37D89772610}|Assignment3_API\\Assignment3_API.csproj|c:\\users\\2002d\\dropbox\\inf354\\inf354\\assignment_3\\api\\assignment3_api\\controllers\\producttypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5E2A2C08-8B21-4662-9849-D37D89772610}|Assignment3_API\\Assignment3_API.csproj|solutionrelative:assignment3_api\\controllers\\producttypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E2A2C08-8B21-4662-9849-D37D89772610}|Assignment3_API\\Assignment3_API.csproj|c:\\users\\2002d\\dropbox\\inf354\\inf354\\assignment_3\\api\\assignment3_api\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E2A2C08-8B21-4662-9849-D37D89772610}|Assignment3_API\\Assignment3_API.csproj|solutionrelative:assignment3_api\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E2A2C08-8B21-4662-9849-D37D89772610}|Assignment3_API\\Assignment3_API.csproj|c:\\users\\2002d\\dropbox\\inf354\\inf354\\assignment_3\\api\\assignment3_api\\controllers\\brandcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E2A2C08-8B21-4662-9849-D37D89772610}|Assignment3_API\\Assignment3_API.csproj|solutionrelative:assignment3_api\\controllers\\brandcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E2A2C08-8B21-4662-9849-D37D89772610}|Assignment3_API\\Assignment3_API.csproj|c:\\users\\2002d\\dropbox\\inf354\\inf354\\assignment_3\\api\\assignment3_api\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E2A2C08-8B21-4662-9849-D37D89772610}|Assignment3_API\\Assignment3_API.csproj|solutionrelative:assignment3_api\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +43,92 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ProductResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\2002d\\Dropbox\\INF354\\INF354\\Assignment_3\\API\\Assignment3_API\\Models\\ProductResponseDto.cs",
+              "RelativeDocumentMoniker": "Assignment3_API\\Models\\ProductResponseDto.cs",
+              "ToolTip": "C:\\Users\\2002d\\Dropbox\\INF354\\INF354\\Assignment_3\\API\\Assignment3_API\\Models\\ProductResponseDto.cs",
+              "RelativeToolTip": "Assignment3_API\\Models\\ProductResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T07:53:17.995Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductCreateDto.cs",
+              "DocumentMoniker": "C:\\Users\\2002d\\Dropbox\\INF354\\INF354\\Assignment_3\\API\\Assignment3_API\\Models\\ProductCreateDto.cs",
+              "RelativeDocumentMoniker": "Assignment3_API\\Models\\ProductCreateDto.cs",
+              "ToolTip": "C:\\Users\\2002d\\Dropbox\\INF354\\INF354\\Assignment_3\\API\\Assignment3_API\\Models\\ProductCreateDto.cs",
+              "RelativeToolTip": "Assignment3_API\\Models\\ProductCreateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T07:53:13.565Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductDto.cs",
+              "DocumentMoniker": "C:\\Users\\2002d\\Dropbox\\INF354\\INF354\\Assignment_3\\API\\Assignment3_API\\Models\\ProductDto.cs",
+              "RelativeDocumentMoniker": "Assignment3_API\\Models\\ProductDto.cs",
+              "ToolTip": "C:\\Users\\2002d\\Dropbox\\INF354\\INF354\\Assignment_3\\API\\Assignment3_API\\Models\\ProductDto.cs",
+              "RelativeToolTip": "Assignment3_API\\Models\\ProductDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T07:53:07.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ProductTypesController.cs",
               "DocumentMoniker": "C:\\Users\\2002d\\Dropbox\\INF354\\INF354\\Assignment_3\\API\\Assignment3_API\\Controllers\\ProductTypesController.cs",
               "RelativeDocumentMoniker": "Assignment3_API\\Controllers\\ProductTypesController.cs",
               "ToolTip": "C:\\Users\\2002d\\Dropbox\\INF354\\INF354\\Assignment_3\\API\\Assignment3_API\\Controllers\\ProductTypesController.cs",
               "RelativeToolTip": "Assignment3_API\\Controllers\\ProductTypesController.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAkwCMAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwBkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T07:03:45.601Z",
+              "WhenOpened": "2025-05-15T07:52:50.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\2002d\\Dropbox\\INF354\\INF354\\Assignment_3\\API\\Assignment3_API\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Assignment3_API\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\2002d\\Dropbox\\INF354\\INF354\\Assignment_3\\API\\Assignment3_API\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Assignment3_API\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAowIMAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T07:52:06.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BrandController.cs",
+              "DocumentMoniker": "C:\\Users\\2002d\\Dropbox\\INF354\\INF354\\Assignment_3\\API\\Assignment3_API\\Controllers\\BrandController.cs",
+              "RelativeDocumentMoniker": "Assignment3_API\\Controllers\\BrandController.cs",
+              "ToolTip": "C:\\Users\\2002d\\Dropbox\\INF354\\INF354\\Assignment_3\\API\\Assignment3_API\\Controllers\\BrandController.cs",
+              "RelativeToolTip": "Assignment3_API\\Controllers\\BrandController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwBwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T07:51:53.036Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthenticationController.cs",
+              "DocumentMoniker": "C:\\Users\\2002d\\Dropbox\\INF354\\INF354\\Assignment_3\\API\\Assignment3_API\\Controllers\\AuthenticationController.cs",
+              "RelativeDocumentMoniker": "Assignment3_API\\Controllers\\AuthenticationController.cs",
+              "ToolTip": "C:\\Users\\2002d\\Dropbox\\INF354\\INF354\\Assignment_3\\API\\Assignment3_API\\Controllers\\AuthenticationController.cs",
+              "RelativeToolTip": "Assignment3_API\\Controllers\\AuthenticationController.cs",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAkwHAAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T07:12:54.869Z",
               "EditorCaption": ""
             }
           ]
