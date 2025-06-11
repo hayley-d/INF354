@@ -1,0 +1,7 @@
+{
+  "name": "streamingApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
