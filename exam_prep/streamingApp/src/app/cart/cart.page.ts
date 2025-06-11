@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-tab2',
-  templateUrl: 'tab2.page.html',
-  styleUrls: ['tab2.page.scss'],
+  selector: 'app-cart',
+  templateUrl: 'cart.page.html',
+  styleUrls: ['cart.page.scss'],
   standalone: false,
 })
-export class Tab2Page {
+
+export class Cart {
 
   constructor() {}
 
