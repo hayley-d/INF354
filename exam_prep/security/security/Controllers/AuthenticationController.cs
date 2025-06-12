@@ -75,7 +75,7 @@ namespace security.Controllers
             catch (Exception ex)
             {
                 // Catch unexpected issues (e.g., DB down) and return 500
-                return StatusCode(500, $"An error occurred while creating the account: {ex.Message}");
+                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred while creating the account: {ex.Message}");
             }
         }
 
