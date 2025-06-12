@@ -82,7 +82,7 @@ namespace security.Controllers
         // This endpoint can only be called by users in the "Admin" role
         [Authorize(Roles = "Admin")]
         [HttpPost]
-        [Authorize(AuthentificationSchemes = "Bearer")]
+        [Authorize(AuthenticationSchemes = "Bearer")]
         [Route("RemoveRoles")]
         public async Task<IActionResult> RemoveRoles(string emailAddress, [FromBody] string[] rolesToRemove)
         {
